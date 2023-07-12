@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "merriweather_sansregular";
+  src: url("../Fonts/merriweathersans-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "merriweather_sansregular";
+  background: #fff;
+}
+nav {
+  padding: 3%;
+  width: 100vw;
+  height: 70px;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h2 {
+  font-family: "Times New Roman";
+  font-size: 42px;
+  font-weight: 600;
+}
+nav .link {
+  display: flex;
+  list-style: none;
+}
+nav .link li {
+  padding-right: 20px;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.hamburger_menu,
+.close_menu,
+#close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .link {
+    margin-top: 10px;
+  }
+}
+/* Phone */
+@media screen and (max-width: 576px) {
+  nav {
+    position: relative;
+    flex-direction: row;
+  }
+  nav .link {
+    height: 100%vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 3%;
+    margin-top: 25px;
+    padding: 15px;
+    box-shadow: 0 0 2px rgb(0, 0, 0.3);
+    transition: all 0.3s ease;
+    transform: translateX(300px);
+  }
+  .link li {
+    padding-top: 30px;
+  }
+  nav .hamburger_menu {
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+  }
+  nav .slide {
+    transform: translateX(0);
+  }
+  /* nav .close_menu {
+    position: absolute;
+    top: 12px;
+    right: 177px;
+    display: block;
+    cursor: pointer;
+  }
+
+  #close {
+    position: absolute;
+    display: none;
+  } */
+  /* #close:checked ~ .link {
+    transform: translateX(300px);
+  } */
+}
